@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-import { useQuery } from '@tanstack/vue-query'
+import { useQueryClient, useQuery } from '@tanstack/vue-query'
+
+const queryClient = useQueryClient()
 
 const { isLoading, data } = useQuery({
     queryKey: ['skills'],
@@ -9,6 +11,11 @@ const { isLoading, data } = useQuery({
         return data;
     }
 })
+
+function fetchCached() {
+    const cachedTodos = queryClient.getQueryData(['skills']);
+    console.log(cachedTodos);
+}
 </script>
 
 <template>
@@ -20,4 +27,5 @@ const { isLoading, data } = useQuery({
             <li v-for="item in data" :key="item.id">{{ item.name }}</li>
         </ul>
     </div>
+    <button type="button" @click="fetchCached" class="px-1 py-2 bg-blue-500">Click fetch</button>
 </template>

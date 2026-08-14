@@ -16,6 +16,7 @@
     "vue-router": "^5.2.0"
   },
   "devDependencies": {
+    "@tanstack/vue-query-devtools": "^6.1.38",
     "@types/node": "^24.13.3",
     "@vitejs/plugin-vue": "^6.0.8",
     "@vue/tsconfig": "^0.9.1",
