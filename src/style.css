@@ -1,12 +1,26 @@
 @import "tailwindcss";
 
-body {
-  background-color: #0A1128;
-  color: white;
+@theme {
+  --color-background: #0f172a;
+  --color-surface: #1e293b;
+  --color-textLight: #E9F0FE; 
+  
+  --color-primary: #E7BC22;
+  --color-secondary: #9E582C;
+  --color-accent: #E83F11;
+
+  --font-display: "Geist", sans-serif;
+  --breakpoint-3xl: 120rem;
 }
 
-
+body {
+  background-color: var(--color-background);
+  color: var(--color-textLight);
+  font-family: var(--font-display);
+}
 
 footer {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
