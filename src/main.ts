@@ -1,7 +1,13 @@
-import { createApp } from 'vue'
+import { ViteSSG } from 'vite-ssg'
 import { VueQueryPlugin } from '@tanstack/vue-query'
 import './style.css'
 import App from './App.vue'
 import router from './router'
 
-createApp(App).use(VueQueryPlugin).use(router).mount('#app')
+export const createApp = ViteSSG(
+    App,
+    router.options,
+    ({ app }) => {
+        app.use(VueQueryPlugin)
+    },
+)
