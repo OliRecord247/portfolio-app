@@ -4,9 +4,16 @@ import SkillsBar from '../components/SkillsBar.vue';
 </script>
 
 <template>
+    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col items-center text-center">
+        <h1 class="text-4xl sm:text-5xl font-display font-bold text-textLight tracking-tight">
+            Oliver Vredesseldonck
+        </h1>
+        <p class="text-secondary font-medium mt-2">Fullstack Software Developer</p>
+    </div>
     <div>
         <SkillsBar />
     </div>
+    
     <div>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi nihil magni perferendis ut excepturi dolorem quae magnam aut sit culpa ea autem doloremque, recusandae nulla minus maxime error ab officiis!</p>
         <p>Illo nostrum, a natus eveniet inventore rem ratione suscipit fuga? Temporibus esse quaerat officia natus debitis beatae. Numquam necessitatibus nostrum totam ex dicta repudiandae impedit aut, molestiae, neque eaque odio.</p>
