@@ -10,12 +10,18 @@ const {
 
 <template>
     <div v-if="isLoading || isError">
-        <p>{{(isError) ? "Error" : "Loading..."}}</p>
+        <p>{{(isError) ? "Error&hellip;" : "Loading&hellip;"}}</p>
     </div>
-    <ul class="flex gap-2 justify-center items-center">
+    <ul class="flex gap-5 flex-wrap justify-end">
         <li 
             v-for="skill in skills"
-            class="px-2 py-1 rounded-lg bg-accent text-textLight"
-        >{{skill.name}}</li>
+            class="px-2 py-1 rounded-lg flex gap-2 items-center bg-surface text-textLight"
+            :title="skill.name"
+        >
+            <div class="px-2 py-1 rounded-lg bg-accent/80">
+                <img :src="`/images/${skill.image}`" :alt="`${skill.name}-logo`" class="h-15"/>
+            </div>
+            <span>{{ skill.name }}</span>
+        </li>
     </ul>
 </template>
