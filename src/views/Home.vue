@@ -1,6 +1,6 @@
 <script lang="ts" setup>
+import ActionButton from '../components/ActionButton.vue';
 import SkillsBar from '../components/SkillsBar.vue';
-
 </script>
 
 <template>
@@ -9,10 +9,18 @@ import SkillsBar from '../components/SkillsBar.vue';
             Oliver Vredesseldonck
         </h1>
         <p class="text-secondary font-medium mt-2">Fullstack Software Developer</p>
+        <ActionButton>Contact</ActionButton>
     </div>
-    <div>
-        <SkillsBar />
-    </div>
+
+    <section class="p-4 bg-surface rounded-lg">
+        <h2>Core Skills</h2>
+        <div class="flex justify-between">
+            <div>
+                <img src="/images/stock-photo.jpg" alt="example image"/>
+            </div>
+            <SkillsBar class="shrink"/>
+        </div>
+    </section>
     
     <div>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi nihil magni perferendis ut excepturi dolorem quae magnam aut sit culpa ea autem doloremque, recusandae nulla minus maxime error ab officiis!</p>
@@ -42,7 +50,7 @@ import SkillsBar from '../components/SkillsBar.vue';
         <p>Temporibus ipsam, nam aliquid ea maxime sapiente quaerat saepe illo, fugit itaque exercitationem voluptatum omnis deleniti blanditiis placeat illum iste! Autem quaerat error temporibus illum. Exercitationem repellat sint ut ullam!</p>
         <p>Error dolorem consequatur adipisci tempore placeat dolor nostrum voluptatum nisi perferendis delectus incidunt repudiandae perspiciatis fuga corrupti consequuntur, eaque commodi cupiditate. Amet molestias maxime quas repudiandae vel eaque. Deserunt, rem.</p>
         <p>Ipsa tenetur animi sit pariatur accusantium molestias harum! Nobis, debitis nostrum magnam error enim repudiandae nesciunt provident corporis! Nisi, in. Enim omnis odio, aperiam odit velit possimus blanditiis soluta non?</p>
-        <p id="test" class="bg-accent">Inventore omnis temporibus unde non illum, nostrum mollitia, culpa veritatis eum, tenetur quas placeat quos itaque quidem doloribus ad excepturi obcaecati! Quod at asperiores nobis ipsa repellendus, odit similique blanditiis?</p>
+        <p>Inventore omnis temporibus unde non illum, nostrum mollitia, culpa veritatis eum, tenetur quas placeat quos itaque quidem doloribus ad excepturi obcaecati! Quod at asperiores nobis ipsa repellendus, odit similique blanditiis?</p>
         <p>Harum totam earum, minima eius quidem fuga error impedit, recusandae veritatis natus facere exercitationem dolorum tempora dicta, numquam vitae accusamus fugit maiores molestias voluptatum sint delectus! Mollitia temporibus ad officia?</p>
         <p>Eaque natus necessitatibus libero consequuntur expedita vel numquam itaque adipisci unde, cupiditate, autem voluptatibus, sunt iure ipsa eveniet minus deserunt id accusantium obcaecati. Exercitationem fugit repudiandae fugiat dicta natus architecto.</p>
         <p>Autem maxime suscipit quo vero minima voluptatem, rem adipisci placeat. Amet in debitis ratione excepturi ut nobis natus? Quas aperiam reprehenderit ut possimus, molestias fugiat et perferendis voluptates dolores animi.</p>
