@@ -2,7 +2,9 @@ import { useQuery } from '@tanstack/vue-query'
 
 type Skill = {
     name: string,
-    level: number
+    level: number,
+    image: string,
+    tags: string[]
 }
 
 async function fetchSkills(): Promise<Skill[]> {
