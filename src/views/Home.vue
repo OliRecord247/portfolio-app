@@ -3,22 +3,49 @@ import ActionButton from '../components/ActionButton.vue';
 import SkillsBar from '../components/SkillsBar.vue';
 </script>
 
-<template>
-    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col items-center text-center">
-        <h1 class="text-4xl sm:text-5xl font-display font-bold text-textLight tracking-tight">
-            Oliver Vredesseldonck
-        </h1>
-        <p class="text-secondary font-medium mt-2">Fullstack Software Developer</p>
-        <ActionButton>Contact</ActionButton>
-    </div>
+<style scoped>
+#name {
+    position: relative;
+    display: inline-block;
+}
 
-    <section class="p-4 bg-surface rounded-lg">
-        <h2>Core Skills</h2>
+#name::after {
+    content: "";
+    background: var(--color-accent);
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+    height: 3px;
+    width: 48%;
+}
+
+#hero {
+    background-image: url('/images/stock-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+</style>
+
+<template>
+    <section id="hero" class="-mx-6 -mt-4 px-8 pt-30 pb-8">
+        <div class="flex flex-col items-end">
+            <h1 id="name" class="text-3xl sm:text-5xl font-display text-end font-bold text-textLight tracking-tight">
+                Oliver Vredesseldonck
+            </h1>
+            <p class="text-secondary font-medium mt-2 text-end">Fullstack Software Developer</p>
+            <ActionButton class="mt-5 self-center">Contact</ActionButton>
+        </div>
+    </section>
+
+    <section class="p-4 bg-surface rounded-lg my-4">
+        <h2 class="subtitle mb-4">Core Skills</h2>
         <div class="flex justify-between">
-            <div>
-                <img src="/images/stock-photo.jpg" alt="example image"/>
+            <div class="rounded-lg overflow-hidden">
+                <img src="/images/stock-photo.jpg" alt="example image" />
             </div>
-            <SkillsBar class="shrink"/>
+            <SkillsBar class="flex-1 min-w-lg"/>
         </div>
     </section>
     
