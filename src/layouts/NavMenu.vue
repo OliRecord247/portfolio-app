@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <style scoped>
-@reference "../style.css";
+@reference "@/style.css";
 
 .menu-link {
     @apply px-4 py-2 rounded-lg font-medium text-textLight/70 transition-all duration-200 hover:text-textLight hover:bg-surface/60;
