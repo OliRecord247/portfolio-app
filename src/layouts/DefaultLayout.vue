@@ -4,7 +4,7 @@ import NavMenu from './NavMenu.vue';
 
 <template>
     <div class="min-h-screen flex flex-col bg-background text-textLight">
-        <header class="sticky top-0 w-full bg-surface border-b border-secondary/20 shadow-md">
+        <header class="sticky top-0 z-10 w-full bg-surface border-b border-secondary/20 shadow-md">
             <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
                 <div class="flex items-center gap-3">
                     <img alt="logo" class="h-8" />
@@ -14,7 +14,7 @@ import NavMenu from './NavMenu.vue';
             </div>
         </header>
 
-        <main class="w-full max-w-7xl mx-auto px-6 py-8">
+        <main class="w-full max-w-7xl mx-auto px-6 py-4 overflow-x-hidden">
             <slot />
         </main>
 
