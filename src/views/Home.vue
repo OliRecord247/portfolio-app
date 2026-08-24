@@ -17,6 +17,7 @@ import SkillsBar from '../components/SkillsBar.vue';
     right: 0;
     height: 3px;
     width: 48%;
+    animation: slideIn 0.5s ease-out forwards;
 }
 
 #hero {
@@ -25,6 +26,15 @@ import SkillsBar from '../components/SkillsBar.vue';
     background-position: center;
     background-repeat: no-repeat;
 
+}
+
+@keyframes slideIn {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 48%;
+    }
 }
 </style>
 
