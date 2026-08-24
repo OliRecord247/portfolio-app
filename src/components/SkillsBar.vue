@@ -14,8 +14,9 @@ const {
     </div>
     <ul v-else class="flex gap-5 flex-wrap justify-end">
         <li 
-            v-for="skill in skills"
             class="px-2 py-1 rounded-lg flex gap-2 items-center bg-surface text-textLight"
+            v-for="skill in skills"
+            :key="skill.id"
             :title="skill.name"
         >
             <div class="px-2 py-1 rounded-lg bg-accent/80">

@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/vue-query'
 
 type Skill = {
+    id: number,
     name: string,
     level: number,
     image: string,
