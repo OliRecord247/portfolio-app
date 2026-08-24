@@ -21,7 +21,7 @@ const routes = [
 const router = createRouter({
   history: import.meta.env.SSR ? createMemoryHistory() : createWebHistory(),
   routes,
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(to, _, savedPosition) {
     if (savedPosition) {
       return savedPosition
     } else if (to.hash) {
@@ -32,7 +32,7 @@ const router = createRouter({
   }
 })
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _, next) => {
   console.log("Hellos")
   const title = to.name ? String(to.name).charAt(0).toUpperCase() + String(to.name).slice(1) : 'Portfolio'
   document.title = `${title} | Mijn Portfolio`
